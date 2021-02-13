@@ -3,6 +3,8 @@
 *::after {
     box-sizing: border-box;
 }
+
+/*HTML is still fine, but why are u in my css file XD*/
 /* Custom Properties, update these for your own design */
 
 :root {
@@ -455,10 +457,37 @@ p strong{
     }
 }
 
+/* My Work */
+
+.my-work {
+    background-color: #111;
+    color: var(--clr-light);
+    text-align: center;    
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+.portfolio__img {
+    transition: 
+        transform 400ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__img:hover,
+.portfolio__img:focus .portfolio__img {
+    transform: scale(1.1);
+}
+
+
+
 /* footer */
 
 .footer {
-    background: #111;
+    background: var(--clr-dark);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
